@@ -1,0 +1,38 @@
+mixin table-head
+    tr.chess-row
+        th.chess-cell-head-empty
+        th.chess-cell-head A
+        th.chess-cell-head B
+        th.chess-cell-head C
+        th.chess-cell-head D
+        th.chess-cell-head E
+        th.chess-cell-head F
+        th.chess-cell-head G
+        th.chess-cell-head H
+        th.chess-cell-head-empty
+mixin row(num)
+    tr
+        td.chess-cell-num= num
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell
+        td.chess-cell-num= num
+
+mixin chess-board
+    table.chess-board
+        tbody
+            +table-head
+            +row(1)
+            +row(2)
+            +row(3)
+            +row(4)
+            +row(5)
+            +row(6)
+            +row(7)
+            +row(8)
+            +table-head
